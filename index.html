@@ -226,12 +226,27 @@
             text-transform: uppercase;
         }
 
+        .car-section {
+            max-width: 1200px;
+            margin: 0 auto 100px;
+        }
+
+        .car-title {
+            font-size: 2.5em;
+            font-weight: 900;
+            margin-bottom: 40px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-align: center;
+            color: #00d4ff;
+            border-bottom: 3px solid #00d4ff;
+            padding-bottom: 20px;
+        }
+
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 15px;
-            max-width: 1200px;
-            margin: 0 auto;
         }
 
         .gallery-item {
@@ -243,15 +258,6 @@
             background: #000;
             cursor: pointer;
             border: 2px solid #1a1a1a;
-        }
-
-        .gallery-item:nth-child(1) {
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-
-        .gallery-item:nth-child(5) {
-            grid-column: span 2;
         }
 
         .gallery-item:hover {
@@ -344,6 +350,14 @@
         }
 
         .lightbox-content img {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            border: 3px solid #00d4ff;
+            box-shadow: 0 0 50px rgba(0, 212, 255, 0.5);
+        }
+
+        .lightbox-content video {
             max-width: 100%;
             max-height: 90vh;
             object-fit: contain;
@@ -551,15 +565,6 @@
             .about-container {
                 grid-template-columns: 1fr;
             }
-
-            .gallery-item:nth-child(1) {
-                grid-column: span 1;
-                grid-row: span 1;
-            }
-
-            .gallery-item:nth-child(5) {
-                grid-column: span 1;
-            }
         }
 
         @media (max-width: 768px) {
@@ -597,6 +602,10 @@
                 font-size: 2.2em;
             }
 
+            .car-title {
+                font-size: 1.8em;
+            }
+
             .about-stats {
                 grid-template-columns: 1fr;
             }
@@ -612,7 +621,8 @@
         <div class="logo">Salome <span>Tediashvili</span></div>
         <nav>
             <a href="#home">Home</a>
-            <a href="#gallery">Gallery</a>
+            <a href="#bmw">BMW</a>
+            <a href="#nissan">Nissan</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -622,73 +632,63 @@
         <div class="hero-content">
             <h1><span class="highlight">DRIVEN</span> BY PASSION</h1>
             <p>Where Performance Meets Elegance</p>
-            <a href="#gallery" class="cta-button">View Collection</a>
+            <a href="#bmw" class="cta-button">View Collection</a>
         </div>
     </section>
 
     <section class="gallery" id="gallery">
-        <h2>Welcome to <span>Salome Tediashvili's</span> Cars</h2>
+        <h2>My <span>Collection</span></h2>
         <p class="gallery-subtitle">Pure Automotive Excellence</p>
-        <div class="gallery-grid">
-            <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/fe902948-d0be-4bf8-b9f2-30a980ea89f0/-/preview/960x640/')">
-                <img src="https://1xg1gn8qhl.ucarecd.net/fe902948-d0be-4bf8-b9f2-30a980ea89f0/-/preview/960x640/" alt="Salome with racing helmet at track">
+
+        <!-- BMW E36 Section -->
+        <div class="car-section" id="bmw">
+            <h3 class="car-title">BMW E36</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/cfd09c23-4f34-4f98-9361-b51adcba5e9f/-/preview/750x1000/')">
+                    <img src="https://1xg1gn8qhl.ucarecd.net/cfd09c23-4f34-4f98-9361-b51adcba5e9f/-/preview/750x1000/" alt="BMW E36">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/e77de48b-676b-44ea-a986-f56911a44961/-/preview/750x1000/')">
+                    <img src="https://1xg1gn8qhl.ucarecd.net/e77de48b-676b-44ea-a986-f56911a44961/-/preview/750x1000/" alt="BMW E36">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/00fcec8e-a664-4232-b5cd-ed381cd10334/-/preview/750x1000/')">
+                    <img src="https://1xg1gn8qhl.ucarecd.net/00fcec8e-a664-4232-b5cd-ed381cd10334/-/preview/750x1000/" alt="BMW E36">
+                </div>
+                <div class="gallery-item" onclick="openVideo('https://1xg1gn8qhl.ucarecd.net/dbd48ec3-25e6-4b4c-95c0-24668cb897af/')">
+                    <video src="https://1xg1gn8qhl.ucarecd.net/dbd48ec3-25e6-4b4c-95c0-24668cb897af/" muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 3em; pointer-events: none;">▶️</div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/2fdb9f30-f5bb-408b-8750-c87f140a32ad/-/preview/433x531/')">
+                    <img src="https://1xg1gn8qhl.ucarecd.net/2fdb9f30-f5bb-408b-8750-c87f140a32ad/-/preview/433x531/" alt="BMW E36">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/1576b818-1fc0-4cd2-869b-b43868fdc4cc/-/preview/455x517/')">
+                    <img src="https://1xg1gn8qhl.ucarecd.net/1576b818-1fc0-4cd2-869b-b43868fdc4cc/-/preview/455x517/" alt="BMW E36">
+                </div>
             </div>
-            <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/7f19afa5-11ac-45d0-9f9c-7b2862dfc2a1/-/preview/800x1000/')">
-                <img src="https://1xg1gn8qhl.ucarecd.net/7f19afa5-11ac-45d0-9f9c-7b2862dfc2a1/-/preview/800x1000/" alt="BMW E36 interior custom steering wheel">
-            </div>
-            <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/d4c82fd6-8131-4a72-9adf-a728e36d78f9/-/preview/750x1000/')">
-                <img src="https://1xg1gn8qhl.ucarecd.net/d4c82fd6-8131-4a72-9adf-a728e36d78f9/-/preview/750x1000/" alt="Blue Nissan 350Z reflection shot">
-            </div>
-            <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/e77de48b-676b-44ea-a986-f56911a44961/-/preview/750x1000/')">
-                <img src="https://1xg1gn8qhl.ucarecd.net/e77de48b-676b-44ea-a986-f56911a44961/-/preview/750x1000/" alt="Golden BMW E36 in parking garage">
-            </div>
-            <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/cfd09c23-4f34-4f98-9361-b51adcba5e9f/-/preview/750x1000/')">
-                <img src="https://1xg1gn8qhl.ucarecd.net/cfd09c23-4f34-4f98-9361-b51adcba5e9f/-/preview/750x1000/" alt="Nissan 350Z interior view">
-            </div>
-            <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/00fcec8e-a664-4232-b5cd-ed381cd10334/-/preview/750x1000/')">
-                <img src="https://1xg1gn8qhl.ucarecd.net/00fcec8e-a664-4232-b5cd-ed381cd10334/-/preview/750x1000/" alt="Salome with Nissan at car meet">
-            </div>
-            <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/27df435a-3852-4a2d-b8aa-414575d9147d/-/preview/960x960/')">
-                <img src="https://1xg1gn8qhl.ucarecd.net/27df435a-3852-4a2d-b8aa-414575d9147d/-/preview/960x960/" alt="BMW and Nissan street shot">
-            </div>
-            <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/0c08174a-87bf-49fe-b59d-9596dd002577/-/preview/799x1000/')">
-                <img src="https://1xg1gn8qhl.ucarecd.net/0c08174a-87bf-49fe-b59d-9596dd002577/-/preview/799x1000/" alt="Salome sunset photoshoot with Nissan">
-            </div>
-            <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/51a540fe-cacd-47cd-b03a-32459a0609ce/-/preview/750x1000/')">
-                <img src="https://1xg1gn8qhl.ucarecd.net/51a540fe-cacd-47cd-b03a-32459a0609ce/-/preview/750x1000/" alt="BMW E36 side profile">
-            </div>
-            <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/78603e14-11c5-40df-8432-ce017e33a496/-/preview/1000x666/')">
-                <img src="https://1xg1gn8qhl.ucarecd.net/78603e14-11c5-40df-8432-ce017e33a496/-/preview/1000x666/" alt="Salome with golden BMW E36">
-            </div>
-            <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/2fdb9f30-f5bb-408b-8750-c87f140a32ad/-/preview/433x531/')">
-                <img src="https://1xg1gn8qhl.ucarecd.net/2fdb9f30-f5bb-408b-8750-c87f140a32ad/-/preview/433x531/" alt="Car detail shot">
-            </div>
-            <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/38d53dc2-d698-407f-9615-ddfe90994e7e/-/preview/419x447/')">
-                <img src="https://1xg1gn8qhl.ucarecd.net/38d53dc2-d698-407f-9615-ddfe90994e7e/-/preview/419x447/" alt="BMW showcase">
-            </div>
-            <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/a0bf4fce-154a-4904-bf61-888ba636cdcb/-/preview/421x529/')">
-                <img src="https://1xg1gn8qhl.ucarecd.net/a0bf4fce-154a-4904-bf61-888ba636cdcb/-/preview/421x529/" alt="Nissan beauty shot">
-            </div>
-            <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/1576b818-1fc0-4cd2-869b-b43868fdc4cc/-/preview/455x517/')">
-                <img src="https://1xg1gn8qhl.ucarecd.net/1576b818-1fc0-4cd2-869b-b43868fdc4cc/-/preview/455x517/" alt="Track day moment">
-            </div>
-            <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/c8ca8195-63ea-4bcc-99bc-72e09ce2c523/-/preview/681x677/')">
-                <img src="https://1xg1gn8qhl.ucarecd.net/c8ca8195-63ea-4bcc-99bc-72e09ce2c523/-/preview/681x677/" alt="Car lifestyle">
-            </div>
-            <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/0c07ed31-5a14-4803-ad6b-2e0f49ad0ac9/-/preview/461x650/')">
-                <img src="https://1xg1gn8qhl.ucarecd.net/0c07ed31-5a14-4803-ad6b-2e0f49ad0ac9/-/preview/461x650/" alt="Automotive passion">
-            </div>
-            <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/80706e66-9dea-4fa8-9f4e-1c410aec6870/-/preview/643x525/')">
-                <img src="https://1xg1gn8qhl.ucarecd.net/80706e66-9dea-4fa8-9f4e-1c410aec6870/-/preview/643x525/" alt="Street style">
-            </div>
-            <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/76c947cf-200f-4fa1-8431-a46ee70be72a/-/preview/428x412/')">
-                <img src="https://1xg1gn8qhl.ucarecd.net/76c947cf-200f-4fa1-8431-a46ee70be72a/-/preview/428x412/" alt="Classic BMW">
-            </div>
-            <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/4d7d1420-b3a3-4620-abfb-a0c7099c171f/-/preview/602x543/')">
-                <img src="https://1xg1gn8qhl.ucarecd.net/4d7d1420-b3a3-4620-abfb-a0c7099c171f/-/preview/602x543/" alt="Performance build">
-            </div>
-            <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/30889a7f-ffa3-4a3b-b88a-1741a9a09f42/-/preview/648x652/')">
-                <img src="https://1xg1gn8qhl.ucarecd.net/30889a7f-ffa3-4a3b-b88a-1741a9a09f42/-/preview/648x652/" alt="Car culture">
+        </div>
+
+        <!-- Nissan 350Z Section -->
+        <div class="car-section" id="nissan">
+            <h3 class="car-title">NISSAN 350Z</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/fe902948-d0be-4bf8-b9f2-30a980ea89f0/-/preview/960x640/')">
+                    <img src="https://1xg1gn8qhl.ucarecd.net/fe902948-d0be-4bf8-b9f2-30a980ea89f0/-/preview/960x640/" alt="Nissan 350Z">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/7f19afa5-11ac-45d0-9f9c-7b2862dfc2a1/-/preview/800x1000/')">
+                    <img src="https://1xg1gn8qhl.ucarecd.net/7f19afa5-11ac-45d0-9f9c-7b2862dfc2a1/-/preview/800x1000/" alt="Nissan 350Z">
+                </div>
+                <div class="gallery-item" onclick="openVideo('https://1xg1gn8qhl.ucarecd.net/95d90803-3cd6-4074-b83d-741ee569e890/')">
+                    <video src="https://1xg1gn8qhl.ucarecd.net/95d90803-3cd6-4074-b83d-741ee569e890/" muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 3em; pointer-events: none;">▶️</div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/d4c82fd6-8131-4a72-9adf-a728e36d78f9/-/preview/750x1000/')">
+                    <img src="https://1xg1gn8qhl.ucarecd.net/d4c82fd6-8131-4a72-9adf-a728e36d78f9/-/preview/750x1000/" alt="Nissan 350Z">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/0c08174a-87bf-49fe-b59d-9596dd002577/-/preview/799x1000/')">
+                    <img src="https://1xg1gn8qhl.ucarecd.net/0c08174a-87bf-49fe-b59d-9596dd002577/-/preview/799x1000/" alt="Nissan 350Z">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('https://1xg1gn8qhl.ucarecd.net/78603e14-11c5-40df-8432-ce017e33a496/-/preview/1000x666/')">
+                    <img src="https://1xg1gn8qhl.ucarecd.net/78603e14-11c5-40df-8432-ce017e33a496/-/preview/1000x666/" alt="Nissan 350Z">
+                </div>
             </div>
         </div>
     </section>
@@ -696,7 +696,8 @@
     <div class="lightbox" id="lightbox" onclick="closeLightbox()">
         <div class="lightbox-content" onclick="event.stopPropagation()">
             <div class="lightbox-close" onclick="closeLightbox()">×</div>
-            <img id="lightbox-img" src="" alt="Enlarged view">
+            <img id="lightbox-img" src="" alt="Enlarged view" style="display: none;">
+            <video id="lightbox-video" controls style="display: none;"></video>
         </div>
     </div>
 
@@ -709,25 +710,6 @@
                 <div class="about-stats">
                     <div class="stat-box">
                         <h3>2</h3>
-                        <p>Dream Machines</p>
-                    </div>
-                    <div class="stat-box">
-                        <h3>∞</h3>
-                        <p>Miles of Passion</p>
-                    </div>
-                    <div class="stat-box">
-                        <h3>100%</h3>
-                        <p>Commitment</p>
-                    </div>
-                    <div class="stat-box">
-                        <h3>24/7</h3>
-                        <p>Automotive Life</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="contact" id="contact">
         <h2>Let's <span>Connect</span></h2>
         <p>Follow The Journey</p>
@@ -751,14 +733,37 @@
         function openLightbox(imgSrc) {
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxVideo = document.getElementById('lightbox-video');
+            
+            lightboxVideo.style.display = 'none';
+            lightboxVideo.pause();
+            lightboxImg.style.display = 'block';
             lightboxImg.src = imgSrc;
+            
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function openVideo(videoSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxVideo = document.getElementById('lightbox-video');
+            
+            lightboxImg.style.display = 'none';
+            lightboxVideo.style.display = 'block';
+            lightboxVideo.src = videoSrc;
+            lightboxVideo.play();
+            
             lightbox.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
 
         function closeLightbox() {
             const lightbox = document.getElementById('lightbox');
+            const lightboxVideo = document.getElementById('lightbox-video');
+            
             lightbox.classList.remove('active');
+            lightboxVideo.pause();
             document.body.style.overflow = 'auto';
         }
 
